@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="Coderthemes" name="author" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+
+    </head>
+
+    <body>
+        <div id="wrapper">
+            <div class="row">
+                    <div class="tasks border mt-5 ml-5">
+                            <div class="card border">
+                                <div class="card-body p-3">
+                                    <div style="font-size: 30px" class="clean"></div>
+                                    <div style="font-size: 30px" class="super_clean"></div>
+                                    <div class="row">
+                                        <div style="font-size: 30px" class="not_clean mt-1"></div>
+                                    </div>
+                                    <div class="desc pt-1">Пример суммирования входных данных!</div>
+                                </div>
+                            </div>
+                    </div>
+            </div>
+
+        <script>
+
+
+            function sum() {
+                let result = 0;
+                let elements =  Array.from(arguments);
+                for (let i = elements.length - 1; i>=0 ; i--){
+                    result += elements[i];
+                }
+                return result;
+            }
+
+            console.log(sum(1, 5, 6, 5));
+            document.querySelector('.not_clean').innerHTML = 'not clean ' + (sum(1,56));
+
+
+        </script>
+    </body>
+</html>
+
+
+
